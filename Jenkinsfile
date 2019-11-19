@@ -16,6 +16,7 @@ pipeline {
             }
         stage('Deploy') {
             steps {
+			sh 'docker push cawthorn/simple-project:latest'
 		echo "Deploy"
             }
         }
