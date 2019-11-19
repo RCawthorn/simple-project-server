@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Testing Environment') {
             steps {
-			sh 'mvn package -DskipTests'
-				sh 'docker build -t="cawthorn/simple-project:latest" .'
+			sh 'mvn test -Dtest=IntegrationSuite'
+				sh 'mvn test -Dtest=ControllerAndServiceSuite'
                 }
             }
         stage('Build') {
