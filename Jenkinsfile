@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Testing Environment') {
             steps {
-                    sh 'mvv package -DskipTests'
+                    sh 'mvn package -DskipTests'
 
                 }
             }
