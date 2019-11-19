@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Testing Environment') {
             steps {
-                    sh 'mvn package -DskipTests'
 
                 }
             }
         stage('Build') {
-            steps {
+            steps { sh 'mvn package -DskipTests'
+			sh 'docker build -t="cawthorn/simple-project:latest" .'
 		echo "Build"
                 }
             }
