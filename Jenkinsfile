@@ -30,6 +30,9 @@ stage('Testing Environment') {
            when{
                     expression{
                         env.BRANCH_NAME == 'developer'
+                         expression{
+                        env.BRANCH_NAME == 'master'
+                    
                     }
                 }
             steps {
