@@ -35,7 +35,7 @@ public class NoteController {
 	public List<NoteDto> getNotes(){
 		return new ArrayList<NoteDto>(service.getNotes());
 	
-	
+	}
 	@RequestMapping(path = "note/", method = {RequestMethod.POST})
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public NoteDto createNote(@RequestBody NoteDto note){
