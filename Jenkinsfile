@@ -20,13 +20,13 @@ pipeline {
             }
         stage('Build') {
             steps { sh 'mvn package -DskipTests'
-			sh 'docker build -t="cawthorn/simple-project:latest" .'
+			sh 'docker build -t="cawthorn/simple-project:${VERSION}" .'
 		echo "Build"
                 }
             }
         stage('Deploy') {
             steps {
-			sh 'docker push cawthorn/simple-project:latest'
+			sh 'docker push cawthorn/simple-project:${VERSION}'
 		echo "Deploy"
             }
         }
