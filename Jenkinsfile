@@ -27,8 +27,13 @@ stage('Testing Environment') {
             }
         }
       stage('Staging') {
+           when{
+                    expression{
+                        env.BRANCH_NAME == 'developer'
+                    }
+                }
             steps {
-                echo "hello"
+                echo "Dev"
             }
         }
       stage('Production') {
