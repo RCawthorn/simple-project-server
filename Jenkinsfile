@@ -20,7 +20,7 @@ pipeline {
 		echo "Deploy"
             }
         }
-    }
+    
 stage('Testing Environment') {
             steps {
                 echo "hello"
@@ -36,5 +36,6 @@ stage('Testing Environment') {
                 echo "hello"
             }
         }
-}
+    }
 
+}
