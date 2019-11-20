@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Testing Environment') {
+        stage('Testing') {
             steps {
 			sh 'mvn test -Dtest=IntegrationSuite'
 				sh 'mvn test -Dtest=ControllerAndServiceSuite'
